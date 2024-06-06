@@ -14,7 +14,6 @@ st.header('Customer Segmentation example with Snowpark using K-Means')
 
 st.write('Sample cluster data that shows the recency, frequency and monetary attributes of each customer')
 
-@st.cache_data
 def get_data():
     df = session.table("RFM_Clusters")
     df_pd = df.to_pandas()
